@@ -51,7 +51,7 @@ class Check {
 
             echo "<br>";
             redirect($href, false);
-            /*
+            
             $table = $page->settings->table['bans'];
 
             $stmt = $page->conn->prepare("SELECT * FROM $table WHERE (uuid=? AND active=" . Settings::$TRUE . ") LIMIT 1");
@@ -76,7 +76,7 @@ class Check {
                 }
             }
             $stmt->closeCursor();
-            */
+            
         } catch (PDOException $ex) {
             Settings::handle_error($page->settings, $ex);
         }
